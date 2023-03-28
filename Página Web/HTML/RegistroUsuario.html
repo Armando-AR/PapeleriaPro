@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrate</title>
+    <link rel="icon" href="../Media/Valorant.ico">
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background: #6ac3da;
+        }
+        .bg{
+            background-image: url("../Media/jebus.gif");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            max-width:100%;
+            max-height:100%;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="container w-60 mt-5 mb-5 rounded shadow bg-white ">
+        <div class="text-end">
+            <h1 class="fw-bold text-center py-4">REGISTRO</h1>
+        </div>
+        <div class="text-end">
+            <h3 class="text-center py-4">DATOS PERSONALES</h3>
+        </div>
+        <div class="row align-items-stretch">
+            <!--COLUMNA IZQUIERDA-->
+            <div class="col  p-5 rounded">
+                <div class="mb-4">
+                    <label for="nombreUsuario" class="form-label">Nombre/s*</label>
+                    <input type="text" class="form-control" name="nombreUsuario">
+                    <br>
+                    <label for="email" class="form-label">Correo Electrónico*</label>
+                    <input type="email" class="form-control" name="email">
+                    <br>
+                    <label for="noTelefono" class="form-label">Número de Teléfono*</label>
+                    <input type="tel" class="form-control" name="noTelefono" pattern="[0-9]{10}">
+                    <br>
+                   
+                </div>
+                <div class="mb-4">
+                    
+                </div>
+            </div>
+            <!--COLUMNA CENTRAL-->
+            <div class="col p-5 rounded">
+                
+                <form action="#">
+                    
+                    <label for="apUsuario" class="form-label">Apellido Paterno*</label>
+                    <input type="text" class="form-control" name="apUsuario">
+                    <br>
+                    <label for="contrasenaUsuario" class="form-label">Contraseña*</label>
+                    <input type="password" class="form-control" name="contrasenaUsuario">
+                    <br>
+                    <label for="RFC" class="form-label">RFC*</label>
+                    <input type="text" class="form-control" name="RFC">
+                    <br><br>
+                    
+                </form>
+            </div>
+            <!--COLUMNA DERECHA-->
+            <div class="col p-5 rounded">
+                
+                <form action="#">
+                    
+                    <label for="amUsuario" class="form-label">Apellido Materno*</label>
+                    <input type="text" class="form-control" name="amUsuario">
+                    <br>
+                    <label for="contrasenaConfirmacionUsuario" class="form-label">Confirme su Contraseña*</label>
+                    <input type="password" class="form-control" name="contrasenaConfirmacionUsuario">
+                    
+                </form>
+            </div>
+            <hr>
+
+            <!----------------------------------------------------------------------------------------------------------------------->
+            <div class="text-end">
+                <h3 class="text-center py-4">DIRECCIÓN</h3>
+            </div>
+            <!--COLUMNA IZQUIERDA-->
+            <div class="col  p-5 rounded">
+                <div class="mb-4">
+                    <label for="calleDireccion" class="form-label">Calle*</label>
+                    <input type="text" class="form-control" name="calleDireccion">
+                    <br>
+                    <label for="cpDireccion" class="form-label">Código Postal*</label>
+                    <input type="text" class="form-control" name="cpDireccion">
+                    <br>
+                    
+                    <form action="#">
+                        <label for="municipioDireccion" class="form-label">Municipio*</label>
+                        <select class="form-select" name="paises" name="municipioDireccion">
+                            <option value="NON"></option>
+                            <option value="QRO">Querétaro</option>
+                            <option value="CDMX">Ciudad de México</option>
+                            <option value="EDOMEX">Establo de México</option>
+                            <option value="HGO">Hidalgo</option>
+                            <option value="JAL">Jalisco</option>
+                            <option value="SIN">Sinaloa</option>
+                        </select>
+                    </form>
+                    <br>
+                </div>
+                <div class="mb-4">
+                    
+                </div>
+            </div>
+            <!--COLUMNA CENTRAL-->
+            <div class="col p-5 rounded">
+                
+                <form action="#">
+                    
+                    <label for="noInterior" class="form-label">Número Interior</label>
+                    <input type="text" class="form-control" name="noInterior">
+                    <br>
+                    <form action="#">
+                        <label for="paisDireccion" class="form-label">País*</label>
+                        <select class="form-select" name="paises" name="paisDireccion">
+                            <option value="NON"></option>
+                            <option value="MX">México</option>
+                            <option value="USA">USA</option>
+                            <option value="CAN">Canada</option>
+                        </select>
+                    </form>
+                    <br>
+                    <label for="RFC" class="form-label">RFC*</label>
+                    <input type="text" class="form-control" name="RFC">
+                    <br><br>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary " style="width: auto; height: 50px;">Registrar</button>
+                    </div>
+                    
+                    <div class="my-9" style="text-align: center;">
+                        <small>
+                            <br>
+                            <span>¿YA TIENES CUENTA?</span><br>
+                            <span><a href="index.html">INICIA SESIÓN AQUÍ</a></span>
+                        </small>
+                    </div>
+                </form>
+            </div>
+            <!--COLUMNA DERECHA-->
+            <div class="col p-5 rounded">
+                
+                <form action="#">
+                    
+                    <label for="noExterior" class="form-label">Número Exterior*</label>
+                    <input type="text" class="form-control" name="noExterior">
+                    <br>
+                    <form action="#">
+                        <label for="edoDireccion" class="form-label">Estado*</label>
+                        <select class="form-select" name="paises" name="edoDireccion">
+                            <option value="NON"></option>
+                            <option value="QRO">Querétaro</option>
+                            <option value="CDMX">Ciudad de México</option>
+                            <option value="EDOMEX">Establo de México</option>
+                            <option value="HGO">Hidalgo</option>
+                            <option value="JAL">Jalisco</option>
+                            <option value="SIN">Sinaloa</option>
+                        </select>
+                    </form>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>  Login</title>
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../Media/Valorant.ico">
+
+    <style>
+        body{
+            background: #dbf8ff;
+        }
+        .bg{
+            background-image: url("../Media/jebus.gif");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            max-width:100%;
+            max-height:100%;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="container w-75 mt-5 rounded shadow">
+        <div class="row align-items-stretch">
+            <div class="col bg d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+                <!--d-none-->
+            </div>
+            <div class="col bg-white p-5 rounded">
+                <div class="text-end">
+                    <h2 class="fw-bold text-center py-4">Bienvenido</h2>
+                </div>
+                <form action="#">
+                    <div class="mb-4">
+                        <label for="USUARIO" class="form-label">USER</label>
+                        <input type="text" class="form-control" name="USUARIO">
+
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="PASSWORD" class="form-label">PASSWORD</label>
+                        <input type="password" class="form-control" name="PASSWORD">
+                    </div>
+                    <div class="mb-4">
+                        <input type="checkbox" class="form-check-input" name="login">
+                        <label for="Keep me logged in" class="form-label">Keep me Logged In</label>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">LOG IN.</button>
+                    </div>
+
+                    <div class="my-3">
+                        <span>¿NO TIENES CUENTA?</span><br>
+                        <span><a href="RegistroUsuario.html">REGÍSTRATE GRATIS</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
