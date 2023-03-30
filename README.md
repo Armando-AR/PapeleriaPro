@@ -5,8 +5,8 @@ Index
 3. Base de datos en firebase
 
 # Modelo entidad-relacion
--Link Draw.io: https://drive.google.com/file/d/11DLrtB9AO9IjxKFaCjEpi7y-po8vWBMu/view
--Link excel: https://docs.google.com/spreadsheets/d/1c-pTgd9ylVwdKqEC1YBzA3Sw4i9NpYDs/edit?usp=sharing&ouid=105481613644073530619&rtpof=true&sd=true
+- Link Draw.io: https://drive.google.com/file/d/11DLrtB9AO9IjxKFaCjEpi7y-po8vWBMu/view
+- Link excel: https://docs.google.com/spreadsheets/d/1c-pTgd9ylVwdKqEC1YBzA3Sw4i9NpYDs/edit?usp=sharing&ouid=105481613644073530619&rtpof=true&sd=true
 - Tabla de clientes
 - Tabla de Direcciones
 - Relacion de clientes y direcciones
