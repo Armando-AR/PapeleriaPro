@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registrate</title>
+    <title>Datos del usuario</title>
     <link rel="icon" href="../Media/Valorant.ico">
-    <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body{
@@ -25,7 +25,7 @@
 
     <div class="container w-60 mt-5 mb-5 rounded shadow bg-white ">
         <div class="text-end">
-            <h1 class="fw-bold text-center py-4">REGISTRO</h1>
+            <!--<h1 class="fw-bold text-center py-4">REGISTRO</h1>-->
         </div>
         <div class="text-end">
             <h3 class="text-center py-4">DATOS PERSONALES</h3>
@@ -35,13 +35,13 @@
             <div class="col  p-5 rounded">
                 <div class="mb-4">
                     <label for="nombreUsuario" class="form-label">Nombre/s*</label>
-                    <input type="text" class="form-control" name="nombreUsuario">
+                    <input type="text" class="form-control" name="nombreUsuario" id="nombreUsuario">
                     <br>
                     <label for="email" class="form-label">Correo Electrónico*</label>
-                    <input type="email" class="form-control" name="email">
+                    <input type="email" class="form-control" name="email" id="email">
                     <br>
                     <label for="noTelefono" class="form-label">Número de Teléfono*</label>
-                    <input type="tel" class="form-control" name="noTelefono" pattern="[0-9]{10}">
+                    <input type="tel" class="form-control" name="noTelefono" id="noTelefono" pattern="[0-9]{10}">
                     <br>
                    
                 </div>
@@ -55,13 +55,13 @@
                 <form action="#">
                     
                     <label for="apUsuario" class="form-label">Apellido Paterno*</label>
-                    <input type="text" class="form-control" name="apUsuario">
+                    <input type="text" class="form-control" name="apUsuario" id="apUsuario">
                     <br>
                     <label for="contrasenaUsuario" class="form-label">Contraseña*</label>
-                    <input type="password" class="form-control" name="contrasenaUsuario">
+                    <input type="password" class="form-control" name="contrasenaUsuario" id="contrasenaUsuario">
                     <br>
                     <label for="RFC" class="form-label">RFC*</label>
-                    <input type="text" class="form-control" name="RFC">
+                    <input type="text" class="form-control" name="RFC" id="RFC">
                     <br><br>
                     
                 </form>
@@ -89,24 +89,13 @@
             <div class="col  p-5 rounded">
                 <div class="mb-4">
                     <label for="calleDireccion" class="form-label">Calle*</label>
-                    <input type="text" class="form-control" name="calleDireccion">
+                    <input type="text" class="form-control" name="calleDireccion" id="calleDireccion">
                     <br>
                     <label for="cpDireccion" class="form-label">Código Postal*</label>
-                    <input type="text" class="form-control" name="cpDireccion">
+                    <input type="text" class="form-control" name="cpDireccion" id="cpDireccion">
                     <br>
                     
-                    <form action="#">
-                        <label for="municipioDireccion" class="form-label">Municipio*</label>
-                        <select class="form-select" name="paises" name="municipioDireccion">
-                            <option value="NON"></option>
-                            <option value="QRO">Querétaro</option>
-                            <option value="CDMX">Ciudad de México</option>
-                            <option value="EDOMEX">Establo de México</option>
-                            <option value="HGO">Hidalgo</option>
-                            <option value="JAL">Jalisco</option>
-                            <option value="SIN">Sinaloa</option>
-                        </select>
-                    </form>
+                    
                     <br>
                 </div>
                 <div class="mb-4">
@@ -119,11 +108,11 @@
                 <form action="#">
                     
                     <label for="noInterior" class="form-label">Número Interior</label>
-                    <input type="text" class="form-control" name="noInterior">
+                    <input type="text" class="form-control" name="noInterior" id="noInterior">
                     <br>
                     <form action="#">
                         <label for="paisDireccion" class="form-label">País*</label>
-                        <select class="form-select" name="paises" name="paisDireccion">
+                        <select class="form-select" name="paises" name="paisDireccion" id="paisDireccion">
                             <option value="NON"></option>
                             <option value="MX">México</option>
                             <option value="USA">USA</option>
@@ -132,7 +121,7 @@
                     </form>
                     <br>
                     <label for="RFC" class="form-label">RFC*</label>
-                    <input type="text" class="form-control" name="RFC">
+                    <input type="text" class="form-control" name="RFC" id="RFC2">
                     <br><br>
                     <div class="d-grid">
                         <button type="submit" class="btn btn-primary " style="width: auto; height: 50px;">Registrar</button>
@@ -150,30 +139,11 @@
             <!--COLUMNA DERECHA-->
             <div class="col p-5 rounded">
                 
-                <form action="#">
-                    
-                    <label for="noExterior" class="form-label">Número Exterior*</label>
-                    <input type="text" class="form-control" name="noExterior">
-                    <br>
-                    <form action="#">
-                        <label for="edoDireccion" class="form-label">Estado*</label>
-                        <select class="form-select" name="paises" name="edoDireccion">
-                            <option value="NON"></option>
-                            <option value="QRO">Querétaro</option>
-                            <option value="CDMX">Ciudad de México</option>
-                            <option value="EDOMEX">Establo de México</option>
-                            <option value="HGO">Hidalgo</option>
-                            <option value="JAL">Jalisco</option>
-                            <option value="SIN">Sinaloa</option>
-                        </select>
-                    </form>
-                    
-                </form>
+                
             </div>
         </div>
     </div>
-
-
+    <script  type="module" src="data.js"></script>
     <script src="../JS/bootstrap.bundle.min.js"></script>
   </body>
 </html>
