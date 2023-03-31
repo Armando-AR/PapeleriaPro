@@ -38,7 +38,7 @@ getDocs(querySelection).then((querySnapshot) => {
 
 const collectionDir = collection(db, "Direccion");
 
-// Seleccion de usuario
+// Seleccion de direccion
 var IdDireccion = 104;
 const querySelectionDir = query(collectionDir, where("IdDireccion", "==", IdDireccion));
 
