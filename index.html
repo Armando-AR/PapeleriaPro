@@ -4,6 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>  Login</title>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+    <script>
+        // Inicializar Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyBjYNh3o7lvIQ9e0IC7GObBYbsa0q6uPaI",
+            authDomain: "papeleria-87feb.firebaseapp.com",
+            projectId: "papeleria-87feb",
+            storageBucket: "papeleria-87feb.appspot.com",
+            messagingSenderId: "953172769653",
+            appId: "1:953172769653:web:6803fe1c374296e820f13c"
+        };
+        firebase.initializeApp(firebaseConfig);
+      </script>
+      
     <link href="../CSS/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="../Media/Valorant.ico">
 
@@ -60,7 +76,7 @@
         </div>
     </div>
 
-
+    <script src="JS/login.js"></script>
     <script src="../JS/bootstrap.bundle.min.js"></script>
   </body>
 </html>
