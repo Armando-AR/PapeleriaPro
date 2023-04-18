@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Actualizacion de contraseña</title>
+    <link rel="icon" href="Media/Valorant.ico">
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background: #6ac3da;
+        }
+        .bg{
+            background-image: url("../Media/jebus.gif");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            max-width:100%;
+            max-height:100%;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="container mt-5 rounded shadow bg-white " style="width: 40%;">
+        <div class="text-end">
+            <h1 class="fw-bold text-center py-4">ACTUALIZACIÓN DE CONTRASEÑA</h1>
+        </div>
+        
+        <div class="row align-items-stretch">
+           
+            <!--COLUMNA CENTRAL-->
+            <div class="col p-5 rounded">
+                
+                <form action="#">
+                    <label for="contrasenaUsuario" class="form-label">Contraseña actual*</label>
+                    <input type="password" class="form-control" name="contrasenaUsuario">
+                    <br>
+                    <label for="nuevaContraseña" class="form-label">Nueva contraseña*</label>
+                    <input type="password" class="form-control" name="nuevaContraseña">
+                    <br>
+                    <label for="confirmacionNuevaContraseña" class="form-label">Confirmar contraseña*</label>
+                    <input type="password" class="form-control" name="confirmacionNuevaContraseña">
+                    <br><br>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary " style="width: auto; height: 50px;">Actualizar</button>
+                    </div>
+                    
+                    <!--<div class="my-9" style="text-align: center;">
+                        <small>
+                            <br>
+                            
+                            
+                        </small>
+                    </div> -->
+                </form>
+            </div>
+            
+            <hr>
+
+            
+
+
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
