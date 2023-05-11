@@ -3,25 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    background: rgb(242,253,255);
+    background: radial-gradient(circle, rgba(242,253,255,1) 0%, rgba(225,250,255,1) 50%, rgba(242,253,255,1) 100%); 
+}
+.SucursalesHeader{
+    background-image: linear-gradient(to left, #ffffff, #005da8);
+    color: transparent;
+    background-clip: text;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+}
 
 /*TARJETAS*/
 .body-div{
     width: 100%;
-    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     margin: 0;
 }
 .container{
+    justify-content: center;
+    align-items: baseline;
+    max-height: max-content;
     width: 100%;
     display: flex;
-    max-width: 1100px;
+    max-width: 1200px;
+    flex-wrap: wrap;
 }
 
 .card{
-    width: 100%;
+    max-width: 340px;
+    min-width: 340px;
     margin: 20px;
     border-radius: 7px;
     overflow: hidden;
@@ -48,9 +67,11 @@
 .card .contenido p{
     line-height: 1.5;
     color: rgb(71, 71, 71);
+    padding-bottom: 5px;
 }
 
 .card .contenido h3{
+    text-transform: uppercase;
     font-weight: 400;
     margin-bottom: 20px;
 }
@@ -82,7 +103,9 @@ a{
 header{
     display: flex;
     height: 70px;
-    background-color: rgb(84, 197, 241);
+    /*background-color: rgb(84, 197, 241);*/
+    background: rgb(0,163,196);
+    background: linear-gradient(90deg, rgba(0,163,196,1) 2%, rgba(76,237,255,1) 52%, rgba(0,163,196,1) 100%); 
     justify-content: space-between;
     align-items: center;
     padding: 10px;
@@ -105,30 +128,3 @@ nav a:hover{
     color: white;
 }
 /* MENÚ SUPERIOR */
-
-/* COLUMNAS */
-
-.columnas {
-    justify-content: center;
-    display: flex;
-    
-}
-
-.columna1 {
-    padding: 50px;
-    margin: 0 10px;
-}
-
-.columna2 {
-    padding: 50px;
-    margin: 0 10px;
-}
-
-.columna3 {
-    padding: 50px;
-    margin: 0 10px;
-}
-
-
-
-/* COLUMNAS */
