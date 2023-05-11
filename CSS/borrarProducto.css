@@ -26,14 +26,20 @@
     border-radius: 7px;
     overflow: hidden;
     background: #ffff;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, .3);
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, .2);
     cursor: default;
     transition: all 400ms ease;
 }
 
-.card:hover{
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, .5);
-    transform: translateY(-1%);
+.card .contenido .borrarBoton{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #cc2f2f;
+    border: 1px solid #cc2f2f;
+    border-radius: 4px;
+    transition: all 400ms ease;
 }
 
 .card img{
@@ -64,6 +70,11 @@
     border: 1px solid #2fb4cc;
     border-radius: 4px;
     transition: all 400ms ease;
+}
+
+.card .contenido .borrarBoton:hover{
+    background: #cc2f2f;
+    color: whit e;
 }
 
 .card .contenido a:hover{
