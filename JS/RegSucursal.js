@@ -48,17 +48,17 @@ document.getElementById("regSuc").addEventListener("click", (event) => {
   const post = document.getElementById("post").value;
 
   console.log(idSuc+
-    "/n"+ idDir +
-    "/n"+ idDir +
-    "/n"+ nombre +
-    "/n"+ ext +
-    "/n"+ edo +
-    "/n"+ encargado +
-    "/n"+ int +
-    "/n"+ pais +
-    "/n"+ calle +
-    "/n"+ mun +
-    "/n"+ post);
+    "\n"+ idDir +
+    "\n"+ idDir +
+    "\n"+ nombre +
+    "\n"+ ext +
+    "\n"+ edo +
+    "\n"+ encargado +
+    "\n"+ int +
+    "\n"+ pais +
+    "\n"+ calle +
+    "\n"+ mun +
+    "\n"+ post);
 
   setDoc(doc(docSurc), {
     IdSucursal: idSuc,
