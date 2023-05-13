@@ -46,6 +46,7 @@ document.getElementById("regSuc").addEventListener("click", (event) => {
   const calle = document.getElementById("calleDireccion").value;
   const mun = document.getElementById("municipioDireccion").value;
   const post = document.getElementById("post").value;
+  const desc = document.getElementById("descripcion").value;
 
   console.log(idSuc+
     "\n"+ idDir +
@@ -63,7 +64,8 @@ document.getElementById("regSuc").addEventListener("click", (event) => {
   setDoc(doc(docSurc), {
     IdSucursal: idSuc,
     Nombre:nombre,
-    Encargado: encargado
+    Encargado: encargado,
+    Descripcion: desc
   }).then(() => {
     console.log("Se ha registrado la sucursal");
   }).catch((error) => {
