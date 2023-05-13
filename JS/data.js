@@ -107,6 +107,7 @@ document.getElementById('regisbtn').addEventListener("click", (event) => {
 
   //Se obtiene la tabla de clientes
   
+  
   const docRef = doc(db, "Clientes", IdCliente);
 
   //Se actualizan los datos del cliente seleccionado
