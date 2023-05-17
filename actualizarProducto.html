@@ -34,27 +34,27 @@
                                 <div class="columnas">
                                     <div class="columna1">
                                         <label for="idProducto" class="form-label">Codigo de barras*</label>
-                                        <input type="text" class="form-control" name="idProducto">
+                                        <input type="number" class="form-control" name="idProducto" id="idProducto">
                                         <br>
                                         <br>
                                         <label for="precioMayProducto" class="form-label">Precio Mayoreo*</label>
-                                        <input type="text" class="form.control" name="precioMayProducto">
+                                        <input type="number" class="form.control" name="precioMayProducto" id="precioMayProducto">
                                     </div>
                                     <div class="columna2">
                                         <label for="nombreProducto" class="form-label">Nombre*</label>
-                                        <input type="text" class="form-control" name="nombreProducto">
+                                        <input type="text" class="form-control" name="nombreProducto" id="nombreProducto">
                                         <br>
                                         <br>
                                         <label for="precioMenProducto" class="form-label">Precio Menudeo*</label>
-                                        <input type="text" class="form-control" name="precioMenProducto">
+                                        <input type="number" class="form-control" name="precioMenProducto" id="precioMenProducto">
                                     </div>
                                     <div class="columna3">
                                         <label for="desProducto" class="form-label">Descripcion*</label>
-                                        <input type="text" class="form-control" name="desProducto">
+                                        <input type="text" class="form-control" name="desProducto" id="desProducto">
                                         <br>
                                         <br>
                                         <label for="existenciaProducto" class="form-label">Existencia*</label>
-                                        <input type="text" class="form-control" name="existenciaProducto">
+                                        <input type="number" class="form-control" name="existenciaProducto" id="existenciaProducto">
                                     </div>
                                 </div>
 
@@ -68,13 +68,13 @@
                         
                             <a href="#">Cancelar</a>
                             
-                            <a href="#">Actualizar</a>
+                            <a id="actualizarBtn" href="#">Actualizar</a>
                         
                     </div>
                 </div>
             </div>
         </div>
-
+        <script  type="module" src="JS/actualizarProducto.js"></script>
         
     </body>
 </html>

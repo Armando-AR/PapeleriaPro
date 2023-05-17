@@ -35,17 +35,17 @@
                                     <div class="columna1">
                                         <br>
                                         <label for="nombreSucursal" class="form-label">Nombre*</label>
-                                        <input type="text" class="form-control" name="nombreSucursal">
+                                        <input type="text" class="form-control" name="nombreSucursal" id="nombreSucursal">
                                         <br>
                                         <br>
                                         <br>
                                         <label for="noExterior" class="form-label">Número Exterior*</label>
-                                        <input type="text" class="form-control" name="noExterior">
+                                        <input type="text" class="form-control" name="noExterior" id="noExterior">
                                         <br>
                                         <br>
                                         <br>
                                         <label for="edoDireccion" class="form-label">Estado*</label>
-                                        <select class="form-select" name="paises" name="edoDireccion">
+                                        <select class="form-select" name="paises" name="edoDireccion" id="edo">
                                             <option value="NON"></option>
                                             <option value="QRO">Querétaro</option>
                                             <option value="CDMX">Ciudad de México</option>
@@ -57,17 +57,17 @@
                                     </div>
                                     <div class="columna2">
                                         <label for="encargadoSucursal" class="dorn-label">Encargado*</label>
-                                        <input type="text" class="form-control" name="encargadoSucursal">
+                                        <input type="text" class="form-control" name="encargadoSucursal" id="encargadoSucursal">
                                         <br>
                                         <br>
                                         <br>
                                         <label for="noInterior" class="form-label">Número Interior</label>
-                                        <input type="text" class="form-control" name="noInterior">
+                                        <input type="text" class="form-control" name="noInterior" id="noInterior">
                                         <br>
                                         <br>
                                         <br>
                                         <label for="paisDireccion" class="form-label">País*</label>
-                                        <select class="form-select" name="paises" name="paisDireccion">
+                                        <select class="form-select" name="paises" name="paisDireccion" id="paisDireccion">
                                             <option value="NON"></option>
                                             <option value="MX">México</option>
                                             <option value="USA">USA</option>
@@ -76,12 +76,12 @@
                                     </div>
                                     <div class="columna3">
                                         <label for="calleDireccion" class="form-label">Calle*</label>
-                                        <input type="text" class="form-control" name="calleDireccion">
+                                        <input type="text" class="form-control" name="calleDireccion" id="calleDireccion">
                                         <br>
                                         <br>
                                         <br>
                                         <label for="municipioDireccion" class="form-label">Municipio*</label>
-                                        <select class="form-select" name="paises" name="municipioDireccion">
+                                        <select class="form-select" name="paises" name="municipioDireccion" id="municipioDireccion">
                                             <option value="NON"></option>
                                             <option value="QRO">Querétaro</option>
                                             <option value="CDMX">Ciudad de México</option>
@@ -103,11 +103,12 @@
                         <br>
                         <a href="#">Cancelar</a>
                         
-                        <a href="#">Guardar</a>
+                        <a id="actualizarBtn" href="#">Guardar</a>
                     </div>
                 </div>
             </div>
         </div>
+        <script  type="module" src="JS/actualizarSucursal.js"></script>
         <!--Tarjetas-->
     </body>
 </html>
