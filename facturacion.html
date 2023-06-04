@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facturación</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .container {
+      margin-top: 80px; /* Aumenta el margen superior para evitar que la barra de navegación cubra el contenido */
+    }
+    .navbar {
+      background-color: royalblue; /* Cambia el color de fondo de la barra de navegación a azul rey */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+    }
+    .navbar-brand {
+      color: white; /* Cambia el color del texto de la barra de navegación a blanco */
+      font-weight: bold;
+      margin-left: 15px; /* Añade un margen izquierdo a la marca de navegación */
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Papelería PRO</div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 id="nombreCliente">Nombre del cliente/Razón Fiscal</h4>
+                <input type="text" id="inputNombreCliente" class="form-control" placeholder="Inicia por apellidos">
+                <br>
+                <h4 id="direccion">Dirección de facturación</h4>
+                <textarea id="inputDireccion" class="form-control" rows="3"></textarea>
+                <br>
+                <h4 id="rfc">Clave del Registro Federal de Contribuyentes</h4>
+                <input type="number" id="inputRFC" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <h4 id="numFactura">Número de factura</h4>
+                <input type="text" id="inputNumFactura" class="form-control" readonly>
+                <br>
+                <h4 id="fechaEmision">Fecha de emisión de factura</h4>
+                <input type="text" id="inputFechaEmision" class="form-control" readonly>
+                <br>
+                <h4 id="fechaVencimiento">Fecha de vencimiento de factura</h4>
+                <input type="text" id="inputFechaVencimiento" class="form-control" readonly>
+                <br>
+                <h4 id="terminosPago">Términos de pago</h4>
+                <select id="selectTerminosPago" class="form-control">
+                    <option value="efectivo">Efectivo</option>
+                    <option value="crédito">Crédito</option>
+                    <option value="débito">Débito</option>
+                    <option value="transferencia">Transferencia interbancaria</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 id="declaracion">Declaración de productos/servicios</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre o descripción del producto/servicio</th>
+                            <th>Cantidad</th>
+                            <th>Precio unitario</th>
+                            <th>Total parcial por producto/servicio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" id="inputDescripcion" class="form-control"></td>
+                            <td><input type="number" id="inputCantidad" class="form-control"></td>
+                            <td><input type="text" id="inputPrecio" class="form-control"></td>
+                            <td><input type="text" id="inputTotal" class="form-control" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-info">AÑADIR</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h4 id="subtotal">Subtotal</h4>
+                <input type="text" id="inputSubtotal" class="form-control" readonly>
+                <br>
+                <h4 id="impuestos">Impuestos</h4>
+                <input type="text" id="inputImpuestos" class="form-control">
+                <br>
+                <h4 id="descuentos">Descuentos</h4>
+                <input type="text" id="inputDescuentos" class="form-control">
+                <br>
+                <h3>TOTAL</h3>
+                <input type="text" id="inputTotalFinal" class="form-control" readonly>
+            </div>
+            <div class="col-md-6">
+                <h4 id="metodoPago">Método de pago</h4>
+                <select id="selectMetodoPago" class="form-control">
+                    <option value="efectivo">Efectivo</option>
+                    <option value="crédito">Crédito</option>
+                    <option value="débito">Débito</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
