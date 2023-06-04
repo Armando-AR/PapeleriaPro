@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Busqueda de producto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0F0F0;
+    }
+    
+    #header {
+      background-color: #2fb4cc;
+      color: white;
+      padding: 1px;
+    }
+    
+    #search-bar {
+      margin-top: 30px;
+      text-align: center;
+    }
+    #title-02 {
+        color:#2fb4cc;
+        margin-top: 30px;
+        text-align: center;
+
+    }
+    
+    #search-bar input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+    }
+    #search-bar button {
+      padding: 10px 15px;
+      background-color: #2fb4cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #product-table {
+      margin: 30px auto;
+      width: 80%;
+      border-collapse: collapse;
+    }
+    
+    #product-table th,
+    #product-table td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    #buton {
+      border-radius: 5px;
+    }
+    #product-table th {
+      background-color: #2fb4cc;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>La papeleria pro</h1>
+  </div>
+  <div id="title-02">
+    <h1>Busqueda de producto</h1>
+    <h4>Coloque el nombre del producto que desea buscar</h4>
+  </div>
+  <div id="search-bar">
+    <input type="text" placeholder="Buscar productos...">
+    <button id="buton">Buscar</button>
+  </div>
+  
+  <table id="product-table">
+    <tr>
+        <th>ID Producto</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Precio Unitario</th>
+        <th>Precio mayoreo</th><
+    </tr>
+    <tr>
+      <td>15365</td>
+      <td>lapiz N°2</td>
+      <td>Lapiz numero 2 color amarillo</td>
+      <td>$2.00</td>
+      <td>$1.70</td>
+    </tr>
+
+   
+  </table>
+</body>
+</html>

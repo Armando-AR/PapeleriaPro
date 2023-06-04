@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carrito de Compra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0F0F0;
+    }
+    
+    #header {
+      background-color: #2fb4cc;
+      color: white;
+      padding: 20px;
+    }
+    
+    #cart-status {
+      text-align: center;
+      margin-top: 30px;
+      color:#2fb4cc;
+    }
+    
+    #cart-products {
+      margin-top: 30px;
+    }
+    
+    #cart-products table {
+      margin: 30px auto;
+      width: 60%;
+      border-collapse: collapse;
+      align-items: center;
+    }
+    
+    #cart-products th,
+    #cart-products td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    
+    #cart-products th {
+      background-color: #2fb4cc;
+      color: white;
+      
+    }
+    
+    #total-amount {
+      margin-top: 30px;
+      text-align: center;
+    }
+    
+    
+    #checkout-buttons {
+      margin-top: 30px;
+      text-align: center;
+    }
+    
+    button {
+      padding: 10px 15px;
+      background-color: #2fb4cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      
+    }
+    .td_del{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+    }
+    .boton-personalizado {
+      text-decoration: none;
+      color: white;
+      background-color: #FF5D5D;
+      text-decoration: none;
+      padding: 7px;
+      border-radius: 5px;
+    }
+    .boton-personalizado:hover {
+      background-color: #ff5d5e;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="header">
+    
+    <h1>La Papeleria PRO</h1>
+  </div>
+  
+  <div id="cart-status">
+    <h1>Carrito</h1>
+    <h3>Estado del Carrito: En proceso</h3>
+  </div>
+  
+  <div id="cart-products">
+    <table>
+      <tr>
+        <th>Cantidad</th>
+        <th>Producto</th>
+        <th>Precio unitario</th>
+        <th>Monto</th>
+        <th>Eliminar</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Goma borracha</td>
+        <td>$19.99</td>
+        <td>$19.99</td>
+        <td class="td_del"><a class="boton-personalizado" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+          </svg></a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Libreta francesa</td>
+        <td>$23.00</td>
+        <td>$46.00</td>
+        <td class="td_del"><a class="boton-personalizado" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+          </svg></a></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Lapicero negro</td>
+        <td>$13.00</td>
+        <td>$65.00</td>
+        <td class="td_del"><a class="boton-personalizado" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+          </svg></a></td>
+      </tr>
+    </table>
+  </div>
+  
+  <div id="total-amount">
+    <h3>Total de la Compra: $</h3>
+  </div>
+
+  
+  <div id="checkout-buttons">
+    <button>Agregar más al Carrito</button>
+    <button>Ir a Pagar</button>
+  </div>
+</body>
+</html>

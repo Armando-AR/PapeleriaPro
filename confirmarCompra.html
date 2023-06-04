@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Confirmar Pedido</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #F0F0F0;
+    }
+    
+    #header {
+      background-color: #2fb4cc;
+      color: white;
+      padding: 20px;
+      text-align:left;
+    }
+    
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    
+    table th, table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    table th {
+      background-color: #2fb4cc;
+      color: white;
+    }
+    
+    #total-amount {
+      font-weight: bold;
+    }
+    
+    #payment-method {
+      margin-top: 20px;
+    }
+    
+    #branch {
+      margin-top: 20px;
+    }
+    
+    #buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    button {
+      padding: 10px 15px;
+      background-color: #2fb4cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    #central {
+        border-collapse: collapse;
+        /*margin: 30px auto;*/
+        justify-content: center;
+    }
+    table {
+        justify-content: center;
+        padding: 3rem;
+        margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>La papeleria pro</h1>
+  </div>
+  
+  <h2>ID del Carrito: 12345</h2>
+  <div id="central">
+    <table>
+        <thead>
+        <tr>
+            <th>Cantidad</th>
+            <th>Producto</th>
+            <th>Precio Unitario</th>
+            <th>Monto por Producto</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>2</td>
+            <td>Producto 1</td>
+            <td>$10</td>
+            <td>$20</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Producto 2</td>
+            <td>$15</td>
+            <td>$15</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Producto 3</td>
+            <td>$8</td>
+            <td>$24</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+  
+  <p>Monto Total de la Compra: <span id="total-amount">$59</span></p>
+  
+  <p id="payment-method">Método de Pago: Tarjeta</p>
+  
+  <p id="branch">Sucursal Seleccionada: Sucursal A</p>
+  
+  <div id="buttons">
+    <button>Regresar</button>
+    <button>Cancelar</button>
+    <button>Aceptar</button>
+  </div>
+</body>
+</html>
