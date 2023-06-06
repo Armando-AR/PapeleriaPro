@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .navbar {
+      background-color: #0047ab;
+      color: white;
+    }
+  </style>
+  <title>Tabla de Categorías</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <span class="navbar-brand mb-0 h1">La Papeleria PRO</span>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col">
+        <h1>Tabla de Categorías</h1>
+      </div>
+      <div class="col text-right">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#crearCategoriaModal">Crear categoría</button>
+      </div>
+    </div>
+
+    <table class="table table-striped mt-4">
+      <thead class="table-header">
+        <tr>
+          <th scope="col">ID_Categoría</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Categoría 1</td>
+          <td>Descripción de la categoría 1</td>
+          <td>
+            <button class="btn btn-primary">Editar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Categoría 2</td>
+          <td>Descripción de la categoría 2</td>
+          <td>
+            <button class="btn btn-primary">Editar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Categoría 3</td>
+          <td>Descripción de la categoría 3</td>
+          <td>
+            <button class="btn btn-primary">Editar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal Crear Categoría -->
+  <div class="modal fade" id="crearCategoriaModal" tabindex="-1" role="dialog" aria-labelledby="crearCategoriaModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="crearCategoriaModalLabel">Crear Categoría</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del formulario para crear categoría -->
+          <form>
+            <div class="form-group">
+              <label for="categoriaId">ID_Categoría</label>
+              <input type="text" class="form-control" id="categoriaId">
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-primary" onclick="generarNumero()">Generar número automáticamente</button>
+            </div>
+            <div class="form-group">
+              <label for="categoriaNombre">Nombre</label>
+              <input type="text" class="form-control" id="categoriaNombre">
+            </div>
+            <div class="form-group">
+              <label for="categoriaDescripcion">Descripción</label>
+              <textarea class="form-control" id="categoriaDescripcion" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="JS/categorias.js"></script>
+</body>
+</html>

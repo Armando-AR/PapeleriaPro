@@ -63,6 +63,10 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 
 
+
+
+
+
 function addToCart(event) {
     const resultItem = event.target.closest(".result-item");
     const itemName = resultItem.querySelector("h4").textContent;
@@ -246,3 +250,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
