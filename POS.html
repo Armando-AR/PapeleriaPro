@@ -1,233 +1,201 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Pantalla de Venta</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-    }
+    <meta charset="UTF-8">
+    <title>Pantalla de Venta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
 
-    .navbar {
-      background-color: #007bff;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 999;
-    }
+        .navbar {
+            background-color: #007bff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
 
-    .left-container {
-      position: fixed;
-      top: 56px;
-      bottom: 0;
-      left: 0;
-      width: 20%;
-      max-width: 300px;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+        .left-container {
+            position: fixed;
+            top: 56px;
+            bottom: 0;
+            left: 0;
+            width: 20%;
+            max-width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-    .search-bar {
-      margin-bottom: 10px;
-    }
+        .search-bar {
+            margin-bottom: 10px;
+        }
 
-    .search-results {
-      max-height: calc(100vh - 180px);
-      overflow-y: auto;
-    }
+        .search-results {
+            max-height: calc(100vh - 180px);
+            overflow-y: auto;
+        }
 
-    .result-item {
-      background-color: #fff;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+        .result-item {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-    .result-item h4 {
-      margin: 0;
-    }
+        .result-item h4 {
+            margin: 0;
+        }
 
-    .result-item p {
-      margin: 5px 0;
-    }
+        .result-item p {
+            margin: 5px 0;
+        }
 
-    .result-item button {
-      margin-top: 5px;
-    }
+        .result-item button {
+            margin-top: 5px;
+        }
 
-    .fixed-container {
-      position: fixed;
-      top: 56px;
-      right: 0;
-      bottom: 0;
-      width: 80%;
-      background-color: #fff;
-      border-left: 1px solid #ccc;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      overflow-y: auto;
-    }
+        .fixed-container {
+            position: fixed;
+            top: 56px;
+            right: 0;
+            bottom: 0;
+            width: 80%;
+            background-color: #fff;
+            border-left: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
 
-    .checkout-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 5px;
-    }
+        .checkout-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
 
-    .checkout-item h3 {
-      margin: 0;
-    }
+        .checkout-item h3 {
+            margin: 0;
+        }
 
-    .checkout-item p {
-      margin: 5px 0;
-    }
+        .checkout-item p {
+            margin: 5px 0;
+        }
 
-    .delete-button {
-      width: fit-content;
-      height: 30px;
-      background-color: red;
-      border: none;
-      cursor: pointer;
-    }
+        .delete-button {
+            width: fit-content;
+            height: 30px;
+            background-color: black;
+            /* Cambio a color negro */
+            border: none;
+            cursor: pointer;
+        }
 
-    .delete-button i {
-      color: #dc3545;
-    }
-    
-    .delete-button-label {
-      display: block;
-      font-size: 12px;
-      color: #fff;
-    }
+        .delete-button i {
+            color: #fff;
+            /* Cambio a letras blancas */
+        }
 
-    .total {
-      text-align: right;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
+        .delete-button-label {
+            display: block;
+            font-size: 12px;
+            color: #fff;
+        }
 
-    .payment-container {
-      text-align: right;
-      margin-top: 20px;
-    }
+        .total {
+            text-align: right;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
 
-    .payment-container input {
-      margin-bottom: 5px;
-    }
+        .payment-container {
+            text-align: right;
+            margin-top: 20px;
+        }
 
-    .pay-button {
-      margin-top: 10px;
-    }
-  </style>
+        .payment-container input {
+            margin-bottom: 5px;
+        }
+
+        .pay-button {
+            margin-top: 10px;
+        }
+    </style>
 </head>
+
 <body>
-  <!-- Agregar la barra de navegación de Bootstrap -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">Pantalla de Venta</a>
-  </nav>
+    <!-- Agregar la barra de navegación de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Pantalla de Venta</a>
+    </nav>
 
-  <div class="left-container">
-    <div class="search-bar">
-      <input type="text" class="form-control" placeholder="Buscar artículo">
+    <div class="left-container">
+        <div class="search-bar">
+            <input type="text" class="form-control" placeholder="Buscar artículo">
+        </div>
+        <div class="search-results">
+            <!-- Contenido de los resultados de búsqueda -->
+            <div class="result-item">
+                <h4>Nombre del artículo 1</h4>
+                <p class="precio_unitario_lista">Precio unitario: $10</p>
+                <button id="add_2_kart"  class="btn btn-primary btn-sm add-to-cart-button">Agregar
+                    a la venta</button>
+            </div>
+            <div class="result-item">
+                <h4>Nombre del artículo 2</h4>
+                <p class="precio_unitario_lista">Precio unitario: $15</p>
+                <button id="add_2_kart"  class="btn btn-primary btn-sm add-to-cart-button">Agregar
+                    a la venta</button>
+            </div>
+            <div class="result-item">
+                <h4>Nombre del artículo 3</h4>
+                <p class="precio_unitario_lista">Precio unitario: $20</p>
+                <button id="add_2_kart"  class="btn btn-primary btn-sm add-to-cart-button">Agregar
+                    a la venta</button>
+            </div>
+            <div class="result-item">
+                <h4>Nombre del artículo 4</h4>
+                <p class="precio_unitario_lista">Precio unitario: $25</p>
+                <button id="add_2_kart" class="btn btn-primary btn-sm add-to-cart-button">Agregar
+                    a la venta</button>
+            </div>
+        </div>
     </div>
-    <div class="search-results">
-      <!-- Contenido de los resultados de búsqueda -->
-      <div class="result-item">
-        <h4>Nombre del artículo 1</h4>
-        <p>Precio unitario: $10</p>
-        <button class="btn btn-primary btn-sm add-to-cart-button">Agregar a la venta</button>
-      </div>
-      <div class="result-item">
-        <h4>Nombre del artículo 2</h4>
-        <p>Precio unitario: $15</p>
-        <button class="btn btn-primary btn-sm add-to-cart-button">Agregar a la venta</button>
-      </div>
-      <div class="result-item">
-        <h4>Nombre del artículo 3</h4>
-        <p>Precio unitario: $20</p>
-        <button class="btn btn-primary btn-sm add-to-cart-button">Agregar a la venta</button>
-      </div>
-      <div class="result-item">
-        <h4>Nombre del artículo 4</h4>
-        <p>Precio unitario: $25</p>
-        <button class="btn btn-primary btn-sm add-to-cart-button">Agregar a la venta</button>
-      </div>
-    </div>
-  </div>
 
-  <div class="fixed-container">
-    <h2>VENTA</h2>
-    <div class="checkout-container" style="height: 65%; overflow-y: auto;">
-      <div class="checkout-item">
-        <div>
-          <h3>Artículo 1</h3>
-          <p>Precio unitario: $10</p>
-          <p>Cantidad: 1</p>
+    <div class="fixed-container">
+        <h2>VENTA</h2>
+        <div class="checkout-container" style="height: 65%; overflow-y: auto;"></div>
+        <div class="total">
+            <h3 id="total_a_pagar">Total: $0</h3>
         </div>
-        <button class="btn btn-danger btn-sm delete-button">
-          <i class="fas fa-trash"></i>
-          <span class="delete-button-label">Borrar</span>
-        </button>
-      </div>
-      <div class="checkout-item">
-        <div>
-          <h3>Artículo 2</h3>
-          <p>Precio unitario: $15</p>
-          <p>Cantidad: 2</p>
+        <div class="payment-container">
+            <input type="number" placeholder="Monto a pagar" class="form-control amount-input">
+            <input type="number" placeholder="Cambio" class="form-control change-input" readonly>
+            <button class="btn btn-success pay-button">Pagar</button>
         </div>
-        <button class="btn btn-danger btn-sm delete-button">
-          <i class="fas fa-trash"></i>
-          <span class="delete-button-label">Borrar</span>
-        </button>
-      </div>
-      <div class="checkout-item">
-        <div>
-          <h3>Artículo 3</h3>
-          <p>Precio unitario: $20</p>
-          <p>Cantidad: 1</p>
-        </div>
-        <button class="btn btn-danger btn-sm delete-button">
-          <i class="fas fa-trash"></i>
-          <span class="delete-button-label">Borrar</span>
-        </button>
-      </div>
-      <div class="checkout-item">
-        <div>
-          <h3>Artículo 4</h3>
-          <p>Precio unitario: $25</p>
-          <p>Cantidad: 3</p>
-        </div>
-        <button class="btn btn-danger btn-sm delete-button">
-          <i class="fas fa-trash"></i>
-          <span class="delete-button-label">Borrar</span>
-        </button>
-      </div>
     </div>
-    <div class="total">
-      <h3>Total: $40</h3>
-    </div>
-    <div class="payment-container">
-      <input type="number" placeholder="Monto a pagar" class="form-control amount-input">
-      <input type="number" placeholder="Cambio" class="form-control change-input" readonly>
-      <button class="btn btn-success pay-button">Pagar</button>
-    </div>
-  </div>
 
-  <!-- Agregar enlace a los scripts de Bootstrap y Font Awesome -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src="/JS/pos.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    
+
 </body>
+
 </html>
