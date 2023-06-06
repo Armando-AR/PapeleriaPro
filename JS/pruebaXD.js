@@ -1,4 +1,3 @@
-/*
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
 import {
   getFirestore,
@@ -10,7 +9,7 @@ import {
   setDoc,
   addDoc
 } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
-*/
+
 
 console.log("Conectando a Firebase...");
 
