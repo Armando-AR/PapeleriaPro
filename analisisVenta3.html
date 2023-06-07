@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Análisis de Venta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #2fb4cc;
+            text-align: center;
+            
+            
+            
+        }
+
+        header {
+            background-color: #2fb4cc;
+            padding: 40px;
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        nav {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin-right: 10px;
+            color: #2fb4cc;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #2fb4cc;
+            color: #ffffff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .tarjeta {
+            width: 300px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+    
+</head>
+
+<body>
+    <header>
+        <div style="float: left;">
+            La papelería PRO
+        </div>
+        <div style="clear: both;"></div>
+    </header>
+
+    <h1>Detalles de Venta</h1>
+
+    <div class="tarjeta">
+        <div id="compra-container"></div>
+    </div>
+    <script type="module" src="JS/analisis.js"></script>
+</body>
+
+</html>

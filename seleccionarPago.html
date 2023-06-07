@@ -16,7 +16,7 @@
     <h1>Metodo de pago</h1>
   </div>
   <div id="title-04">
-    <h2>Monto a pagar: $</h2>
+    <h2>Seleccione un metodo de pago</h2>
   </div>
   <div id="title-02">
     <div class="payment-option" id="cash-option" onclick="selectPaymentOption(this)">
@@ -64,10 +64,15 @@
     <br>
   </div>
   <div id="checkout-button">
-    <button id="btnPagar">Pagar</button>
+    <button id="btnPagar" onclick="redireccionar()">Pagar</button>
   </div>
   <br>
   <script src="JS/pago.js"></script>
+  <script>
+    function redireccionar() {
+      window.location.href = "confirmarCompra.html";
+    }
+  </script>
 </body>
 
 </html>

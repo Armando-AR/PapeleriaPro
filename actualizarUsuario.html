@@ -130,9 +130,11 @@
                 type="submit"
                 class="btn btn-primary"
                 style="width: auto; height: 50px"
+                onclick="redireccionar()"
               >
                 Actualizar
               </button>
+              <a href="actualizar contraseña.html">Cambiar contraseña</a>
             </div>
 
             <div class="my-9" style="text-align: center">
@@ -168,5 +170,10 @@
     </div>
     <script type="module" src="JS/actualizarUsuario.js"></script>
     <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script>
+      function redireccionar() {
+        window.location.href = "MENU.html";
+      }
+    </script>
   </body>
 </html>

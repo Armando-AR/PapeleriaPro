@@ -160,7 +160,7 @@
         <div class="payment-container">
             <!--<input type="number" placeholder="Monto a pagar" class="form-control amount-input">
             <input type="number" placeholder="Cambio" class="form-control change-input" readonly>
-            --><button class="btn btn-success pay-button">NEXT -></button>
+            --><button class="btn btn-success pay-button" onclick="redireccionar()">NEXT -></button>
         </div>
     </div>
     <script src="JS/jquery-3.7.0.js"></script>
@@ -170,7 +170,11 @@
 
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
+    <script>
+        function redireccionar() {
+          window.location.href = "seleccionarPago.html";
+        }
+      </script>
 </body>
 
 </html>

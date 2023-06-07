@@ -12,7 +12,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     .then(function (querySnapshot) {
       if (querySnapshot.size > 0) {
         alert("Bienvenido");
-        window.location.href = "RegistroUsuario.html";
+        window.location.href = "MENU.html";
       } else {
         alert("Usuario o contraseña incorrectos");
       }

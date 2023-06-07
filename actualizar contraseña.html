@@ -150,7 +150,7 @@
             <input type="password" class="form-control" name="confirmacionNuevaContraseña">
           </div>
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary">Actualizar</button>
+            <button onclick="redireccionar()" type="submit" class="btn btn-primary">Actualizar</button>
           </div>
         </form>
       </div>
@@ -158,6 +158,11 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function redireccionar() {
+      window.location.href = "actualizarUsuario.html";
+    }
+  </script>
 </body>
 
 </html>
