@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Registro de productos</title>
-        <link rel="icon" href="Media/Valorant.ico">
-        <link rel="stylesheet" href="./CSS/actualizarProducto.css">
-    </head>
-    <body>
-        <!--Menú superior-->
-        <header>
-            <a href="#" class="logo">
-                <img src="Media/Valorant.ico">
-                <h2 class="nombre-empresa">La Papelería Pro</h2>
-            </div>
-            <nav>
-                <a href="#" class="nav-link">Inicio</a>
-                <a href="#" class="nav-link">Contacto</a>
-                <a href="#" class="nav-link">No se</a>
-            </nav>
-        </header>
-        <!--Menú superior-->
-        <div class="body-div">
-            <div class="container">
-                <div class="card">
-                    <div class="contenido">
-                        <h1>Registro de producto</h1>
-                        <br>
-                        <p>Llena todos los campos requeridos</p>
-                        <div class="col  p-5 rounded">
-                            <div class="mb-4">
-                                <div class="columnas">
-                                    <div class="columna1">
-                                        <label for="idProducto" class="form-label">Codigo de barras*</label>
-                                        <input type="number" class="form-control" name="idProducto" id="idProducto">
-                                        <br>
-                                        <br>
-                                        <label for="precioMayProducto" class="form-label">Precio Mayoreo*</label>
-                                        <input type="number" class="form.control" name="precioMayProducto" id="precioMayProducto">
-                                    </div>
-                                    <div class="columna2">
-                                        <label for="nombreProducto" class="form-label">Nombre*</label>
-                                        <input type="text" class="form-control" name="nombreProducto" id="nombreProducto">
-                                        <br>
-                                        <br>
-                                        <label for="precioMenProducto" class="form-label">Precio Menudeo*</label>
-                                        <input type="number" class="form-control" name="precioMenProducto" id="precioMenProducto">
-                                    </div>
-                                    <div class="columna3">
-                                        <label for="desProducto" class="form-label">Descripcion*</label>
-                                        <input type="text" class="form-control" name="desProducto" id="desProducto">
-                                        <br>
-                                        <br>
-                                        <label for="existenciaProducto" class="form-label">Existencia*</label>
-                                        <input type="number" class="form-control" name="existenciaProducto" id="existenciaProducto">
-                                    </div>
-                                </div>
 
-                                
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de productos</title>
+    <link rel="icon" href="Media/Valorant.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Menú superior -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #87CEEB;">
+            <a class="navbar-brand" href="#">
+                <span class="ml-2">La Papelería Pro</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                
+            </div>
+        </nav>
+    </header>
+    <!-- Menú superior -->
+    <div class="body-div">
+        <div class="container">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h1 class="card-title">Registro de producto</h1>
+                    <p class="card-text">Llena todos los campos requeridos</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="idProducto">Codigo de barras*</label>
+                                    <input type="number" class="form-control" name="idProducto" id="idProducto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="precioMayProducto">Precio Mayoreo*</label>
+                                    <input type="number" class="form-control" name="precioMayProducto" id="precioMayProducto">
+                                </div>
                             </div>
-                            <div class="mb-4">
-                                
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nombreProducto">Nombre*</label>
+                                    <input type="text" class="form-control" name="nombreProducto" id="nombreProducto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="precioMenProducto">Precio Menudeo*</label>
+                                    <input type="number" class="form-control" name="precioMenProducto" id="precioMenProducto">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="desProducto">Descripcion*</label>
+                                    <input type="text" class="form-control" name="desProducto" id="desProducto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="existenciaProducto">Existencia*</label>
+                                    <input type="number" class="form-control" name="existenciaProducto" id="existenciaProducto">
+                                </div>
                             </div>
                         </div>
-                        <br>
-                        
-                        <button onclick="window.location.href= 'index.html'" type="button">Cancelar</button>
-                        <button type="summit" name="regProd" id="regProd">Registrar</button>
-                        
-                    </div>
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <button onclick="window.location.href='index.html'" class="btn btn-secondary mr-2">Cancelar</button>
+                                <button type="submit" class="btn btn-primary" name="regProd" id="regProd">Registrar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <script  type="module" src="./JS/RegProd.js"></script>
-        <script src="./JS/bootstrap.bundle.min.js"></script>
-    </body>
-    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src="./JS/RegProd.js"></script>
+</body>
+
 </html>

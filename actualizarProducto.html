@@ -6,31 +6,112 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Actualizacion de productos</title>
         <link rel="icon" href="Media/Valorant.ico">
-        
-        <link rel="stylesheet" href="CSS/actualizarProducto.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- CSS personalizado -->
+        <style>
+            body {
+                background-image: url('Media/fondo_azul_papeleria.avif');
+                background-size: cover;
+                background-position: center;
+            }
+            .navbar {
+                background-color: #0056b3;
+            }
+            .navbar-brand {
+                color: #fff !important;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .navbar-nav .nav-link {
+                color: #fff !important;
+                margin-right: 10px;
+            }
+            .logo img {
+                width: 30px;
+                height: 30px;
+                margin-right: 5px;
+            }
+            .nombre-empresa {
+                display: inline;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .body-div {
+                margin-top: 20px;
+            }
+            .card {
+                background-color: #fff;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+            .contenido h1 {
+                font-size: 30px;
+                color: #007bff;
+                margin-bottom: 10px;
+            }
+            .contenido p {
+                color: #6c757d;
+            }
+            .columnas {
+                display: flex;
+            }
+            .columna1,
+            .columna2,
+            .columna3 {
+                flex: 1;
+                padding: 0 10px;
+            }
+            .form-label {
+                color: #007bff;
+                font-weight: bold;
+            }
+            #actualizarBtn {
+                background-color: #007bff;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                margin-right: 10px;
+            }
+            #actualizarBtn:hover {
+                background-color: #0056b3;
+            }
+            a {
+                color: #007bff;
+                text-decoration: none;
+            }
+            a:hover {
+                color: #0056b3;
+            }
+        </style>
     </head>
     <body>
-        <!--Menú superior-->
-        <header>
-            <a href="#" class="logo">
-                <img src="Media/Valorant.ico">
-                <h2 class="nombre-empresa">La Papelería Pro</h2>
+        <!-- Barra de navegación superior -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">
+                
+                La Papelería Pro
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                </ul>
             </div>
-            <nav>
-                <a href="#" class="nav-link">Inicio</a>
-                <a href="#" class="nav-link">Contacto</a>
-                <a href="#" class="nav-link">No se</a>
-            </nav>
-        </header>
-        <!--Menú superior-->
+        </nav>
+        <!-- Barra de navegación superior -->
         <div class="body-div">
             <div class="container">
                 <div class="card">
                     <div class="contenido">
                         <h1>Actualizacion de producto</h1>
                         <br>
-                        <p>Llena de nuevo los compos que han cambiado</p>
-                        <div class="col  p-5 rounded">
+                        <p>Llena de nuevo los campos que han cambiado</p>
+                        <div class="col p-5 rounded">
                             <div class="mb-4">
                                 <div class="columnas">
                                     <div class="columna1">
@@ -39,7 +120,7 @@
                                         <br>
                                         <br>
                                         <label for="precioMayProducto" class="form-label">Precio Mayoreo*</label>
-                                        <input type="number" class="form.control" name="precioMayProducto" id="precioMayProducto">
+                                        <input type="number" class="form-control" name="precioMayProducto" id="precioMayProducto">
                                     </div>
                                     <div class="columna2">
                                         <label for="nombreProducto" class="form-label">Nombre*</label>
@@ -50,7 +131,7 @@
                                         <input type="number" class="form-control" name="precioMenProducto" id="precioMenProducto">
                                     </div>
                                     <div class="columna3">
-                                        <label for="desProducto" class="form-label">Descripcion*</label>
+                                        <label for="desProducto" class="form-label">Descripción*</label>
                                         <input type="text" class="form-control" name="desProducto" id="desProducto">
                                         <br>
                                         <br>
@@ -58,24 +139,17 @@
                                         <input type="number" class="form-control" name="existenciaProducto" id="existenciaProducto">
                                     </div>
                                 </div>
-
-                                
-                            </div>
-                            <div class="mb-4">
-                                
                             </div>
                         </div>
                         <br>
-                        
-                            <a href="#">Cancelar</a>
-                            
-                            <a id="actualizarBtn" href="#">Actualizar</a>
-                        
+                        <a href="#">Cancelar</a>
+                        <a id="actualizarBtn" href="#">Actualizar</a>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script  type="module" src="JS/actualizarProducto.js"></script>
-        
     </body>
 </html>

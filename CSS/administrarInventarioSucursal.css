@@ -18,9 +18,9 @@ header{
     display: flex;
     height: 70px;
     /*background-color: rgb(84, 197, 241);*/
-    background: rgb(0,163,196);
-    background: linear-gradient(90deg, #00a3c4 2%, rgba(76,237,255,1) 52%, rgba(0,163,196,1) 100%); 
-    justify-content: space-between;
+    background: royalblue;
+    /*background: linear-gradient(90deg, #00a3c4 2%, rgba(76,237,255,1) 52%, rgba(0,163,196,1) 100%); 
+    */justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
