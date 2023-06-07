@@ -1,120 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Selección de Pago</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #F0F0F0;
-    }
-    
-    #header {
-      background-color: #2fb4cc;
-      color: white;
-      padding: 20px;
-    }
-    
-    .payment-option {
-      margin-top: 30px;
-      text-align: center;
-      display: inline-block;
-      width: 200px;
-      border: 1px solid #ccc;
-      padding: 20px;
-      cursor: pointer;
-      position: relative;
-      border-radius: 5px;
-    }
-    
-    .payment-option:hover {
-      background-color: #f1f1f1;
-    }
-    
-    .payment-option input[type="checkbox"] {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-    
-    .payment-option.selected {
-      background-color: #2fb4cc;
-      color: white;
-    }
-    
-    .payment-option.selected:hover {
-      background-color: #2fb4cc;
-    }
-    
-    .payment-option.selected input[type="checkbox"] {
-      display: none;
-    }
-    
-    #credit-card-fields {
-      margin-top: 30px;
-      text-align: center;
-      display: none;
-    }
-    
-    #credit-card-fields label {
-      display: block;
-      margin-bottom: 10px;
-    }
-    
-    #checkout-button {
-      margin-top: 30px;
-      text-align: center;
-    }
-    #title-02 {
-        text-align: center;
-    }
-    #title-03{
-        text-align: center;
-        color:#2fb4cc;
-    }
-    #title-04 {     
-       text-align: center;
-
-    }
-    button {
-      padding: 10px 15px;
-      background-color: #2fb4cc;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    
-    input[type="text"] {
-      padding: 10px;
-      font-size: 16px;
-    }
-  </style>
-  <script>
-    function selectPaymentOption(option) {
-      var options = document.getElementsByClassName("payment-option");
-      for (var i = 0; i < options.length; i++) {
-        options[i].classList.remove("selected");
-      }
-      option.classList.add("selected");
-      
-      var checkboxes = document.getElementsByClassName("payment-checkbox");
-      for (var i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].checked = false;
-      }
-      option.getElementsByClassName("payment-checkbox")[0].checked = true;
-      
-      var fields = document.getElementById("credit-card-fields");
-      fields.style.display = option.id === "credit-card-option" ? "block" : "none";
-    }
-  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/pago.css">
 </head>
+
 <body>
   <div id="header">
     <h1>La papeleria pro</h1>
   </div>
-  
   <div id="title-03">
     <h1>Metodo de pago</h1>
   </div>
@@ -123,13 +20,13 @@
   </div>
   <div id="title-02">
     <div class="payment-option" id="cash-option" onclick="selectPaymentOption(this)">
-        <h2>Efectivo</h2>
-        <input type="checkbox" class="payment-checkbox">
+      <h2>Efectivo</h2>
+      <input type="checkbox" class="payment-checkbox" id="efectivo">
     </div>
     <br>
     <div class="payment-option" id="credit-card-option" onclick="selectPaymentOption(this)">
-        <h2>Tarjeta</h2>
-        <input type="checkbox" class="payment-checkbox">
+      <h2>Tarjeta</h2>
+      <input type="checkbox" class="payment-checkbox">
     </div>
   </div>
   <div id="credit-card-fields">
@@ -137,8 +34,28 @@
     <input type="text" id="card-number">
     <br>
     <br>
+    <label for="card-number">Nombre en la Tarjeta:</label>
+    <input type="text" id="card-number">
+    <br>
+    <br>
     <label for="expiry-date">Fecha de Vencimiento:</label>
-    <input type="text" id="expiry-date">
+    <select class="form-select" aria-label="Default select example">
+      <option selected>MES</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+    </select>
+    <label for="card-number">Año a dos digitos:</label>
+    <input type="text" id="card-number">
     <br>
     <br>
     <label for="cvv">CVV:</label>
@@ -147,8 +64,10 @@
     <br>
   </div>
   <div id="checkout-button">
-    <button>Pagar</button>
+    <button id="btnPagar">Pagar</button>
   </div>
   <br>
+  <script src="JS/pago.js"></script>
 </body>
+
 </html>

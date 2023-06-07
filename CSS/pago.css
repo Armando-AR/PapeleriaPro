@@ -1,0 +1,88 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0F0F0;
+    }
+    
+    #header {
+      background-color: #2fb4cc;
+      color: white;
+      padding: 20px;
+    }
+    
+    .payment-option {
+      margin-top: 30px;
+      text-align: center;
+      display: inline-block;
+      width: 200px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      cursor: pointer;
+      position: relative;
+      border-radius: 5px;
+    }
+    
+    .payment-option:hover {
+      background-color: #f1f1f1;
+    }
+    
+    .payment-option input[type="checkbox"] {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    
+    .payment-option.selected {
+      background-color: #2fb4cc;
+      color: white;
+    }
+    
+    .payment-option.selected:hover {
+      background-color: #2fb4cc;
+    }
+    
+    .payment-option.selected input[type="checkbox"] {
+      display: none;
+    }
+    
+    #credit-card-fields {
+      margin-top: 30px;
+      text-align: center;
+      display: none;
+    }
+    
+    #credit-card-fields label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    #checkout-button {
+      margin-top: 30px;
+      text-align: center;
+    }
+    #title-02 {
+        text-align: center;
+    }
+    #title-03{
+        text-align: center;
+        color:#2fb4cc;
+    }
+    #title-04 {     
+       text-align: center;
+
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #2fb4cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+    }

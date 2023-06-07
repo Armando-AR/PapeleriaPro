@@ -1,0 +1,29 @@
+
+    .container {
+      margin-top: 80px; /* Aumenta el margen superior para evitar que la barra de navegación cubra el contenido */
+    }
+    .navbar {
+      background-color: royalblue; /* Cambia el color de fondo de la barra de navegación a azul rey */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+    }
+    .navbar-brand {
+      color: white; /* Cambia el color del texto de la barra de navegación a blanco */
+      font-weight: bold;
+      margin-left: 15px; /* Añade un margen izquierdo a la marca de navegación */
+    }
+    .facturar-button {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .facturar-button button {
+      background-color: royalblue;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }

@@ -5,36 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Facturación</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    .container {
-      margin-top: 80px; /* Aumenta el margen superior para evitar que la barra de navegación cubra el contenido */
-    }
-    .navbar {
-      background-color: royalblue; /* Cambia el color de fondo de la barra de navegación a azul rey */
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-    }
-    .navbar-brand {
-      color: white; /* Cambia el color del texto de la barra de navegación a blanco */
-      font-weight: bold;
-      margin-left: 15px; /* Añade un margen izquierdo a la marca de navegación */
-    }
-    .facturar-button {
-      margin-top: 20px;
-      text-align: center;
-    }
-    .facturar-button button {
-      background-color: royalblue;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="CSS/factura.css">
 </head>
 <body>
   <nav class="navbar">
@@ -50,7 +21,11 @@
         <textarea id="inputDireccion" class="form-control" rows="3"></textarea>
         <br>
         <h4 id="rfc">Clave del Registro Federal de Contribuyentes</h4>
-        <input type="number" id="inputRFC" class="form-control">
+        <input type="text" id="inputRFC" class="form-control">
+        <br>
+        <h4 id="nombreCliente">Correo de Cliente</h4>
+        <input type="text" id="correoCliente" class="form-control" placeholder="ejemplo@correo.com">
+      
       </div>
       <div class="col-md-6">
         <h4 id="numFactura">Número de factura</h4>
@@ -88,25 +63,30 @@
             <tr>
               <td><input type="text" id="inputDescripcion" class="form-control"></td>
               <td><input type="number" id="inputCantidad" class="form-control"></td>
-              <td><input type="text" id="inputPrecio" class="form-control"></td>
-              <td><input type="text" id="inputTotal" class="form-control" readonly></td>
+              <td><input type="number" id="inputPrecio" class="form-control"></td>
+              
             </tr>
           </tbody>
+          <tbody id="totalProd"></tbody>
         </table>
-        <button class="btn btn-info">AÑADIR</button>
+        <button class="btn btn-info" id="addProd">AÑADIR</button>
       </div>
     </div>
     <br>
     <div class="row">
       <div class="col-md-6">
         <h4 id="subtotal">Subtotal</h4>
-        <input type="text" id="inputSubtotal" class="form-control" readonly>
+        <input type="number" id="inputSubtotal" class="form-control" readonly>
         <br>
         <h4 id="impuestos">Impuestos</h4>
-        <input type="text" id="inputImpuestos" class="form-control">
+        <input type="number" id="inputImpuestos" class="form-control">
         <br>
         <h4 id="descuentos">Descuentos</h4>
-        <input type="text" id="inputDescuentos" class="form-control">
+        <input type="number" id="inputDescuentos" class="form-control">
+<br>
+        <div class="facturar-button">
+          <button id="calculo">Calcular total</button>
+        </div>
         <br>
         <h3>TOTAL</h3>
         <input type="text" id="inputTotalFinal" class="form-control" readonly>
@@ -121,8 +101,11 @@
       </div>
     </div>
     <div class="facturar-button">
-      <button>Facturar</button>
+      <button id="btnFactura">Facturar</button>
     </div>
   </div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="JS/factura.js"></script>
+  
 </body>
 </html>
