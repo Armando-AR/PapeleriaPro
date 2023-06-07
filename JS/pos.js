@@ -1,9 +1,71 @@
-
 // Agregar eventos a los botones "Agregar a la venta"
-const addButtons = document.querySelectorAll(".add-to-cart-button");
-addButtons.forEach(button => {
-    button.addEventListener("click", addToCart);
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+import {
+  getFirestore,
+  doc,
+  collection,
+  query,
+  where,
+  getDocs,
+  setDoc,
+  addDoc,
+  deleteDoc,
+  onSnapshot
+} from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+
+// Configuración de Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyBjYNh3o7lvIQ9e0IC7GObBYbsa0q6uPaI",
+  authDomain: "papeleria-87feb.firebaseapp.com",
+  projectId: "papeleria-87feb",
+  storageBucket: "papeleria-87feb.appspot.com",
+  messagingSenderId: "953172769653",
+  appId: "1:953172769653:web:6803fe1c374296e820f13c",
+};
+
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+
+// Referencia a la base de datos
+const db = getFirestore(app);
+
+const taskContainer = document.getElementById("search-results");
+//const taskContainer = document.getElementById("productos-container");
+
+const onGetTask = (callback) => onSnapshot(collection(db, 'Productos'), callback)
+
+window.addEventListener('DOMContentLoaded', async () => {
+    onGetTask((querySnapshot) =>{
+        let html = ''
+        querySnapshot.forEach(doc => {
+            const task = doc.data()
+            console.log(doc.data());
+            html += `
+                <div class="result-item">
+                    <h4>${task.Nombre}</h4>
+                    <p class="precio_unitario_lista">Precio unitario: $${task.PrecioMayoreo}</p>
+                    <p class="inventario_lista">Existencia: ${task.Existencia}</p>
+                    <button id="add_2_kart"  class="btn btn-primary btn-sm add-to-cart-button">Agregar
+                        a la venta</button>
+                </div>
+            `
+        })
+        taskContainer.innerHTML =html
+
+        const addButtons = document.querySelectorAll(".add-to-cart-button");
+        addButtons.forEach(button => {
+            button.addEventListener("click", addToCart);
+        });
+    });
 });
+
+
+
+
+
+
+
 
 function addToCart(event) {
     const resultItem = event.target.closest(".result-item");
@@ -70,6 +132,7 @@ function addToCart(event) {
     // Bloquear el botón "add_2_kart"
     event.target.disabled = true;
 }
+
 
 function incrementQuantity(event) {
     const checkoutItem = event.target.closest(".checkout-item");
@@ -187,3 +250,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+

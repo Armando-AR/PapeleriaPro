@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+/*import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
 import {
   getFirestore,
   doc,
@@ -25,7 +25,13 @@ const firebaseConfig = {
 
 
   // Inicializar la aplicación de Firebase
-  firebase.initializeApp(firebaseConfig);
+  //firebase.initializeApp(firebaseConfig);
+
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+
+// Referencia a la base de datos
+const db = getFirestore(app);
 
   // Obtener una referencia a la tabla "Productos" dentro de la base de datos "Papeleria"
   const productosRef = firebase.database().ref('Papeleria/Productos');
@@ -53,4 +59,65 @@ const firebaseConfig = {
       const productosContainer = document.getElementById('productos-container');
       productosContainer.appendChild(productoElement);
     });
-  });
+  });*/
+
+
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+import {
+  getFirestore,
+  doc,
+  collection,
+  query,
+  where,
+  getDocs,
+  setDoc,
+  addDoc,
+  deleteDoc,
+  onSnapshot
+} from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
+
+// Configuración de Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyBjYNh3o7lvIQ9e0IC7GObBYbsa0q6uPaI",
+  authDomain: "papeleria-87feb.firebaseapp.com",
+  projectId: "papeleria-87feb",
+  storageBucket: "papeleria-87feb.appspot.com",
+  messagingSenderId: "953172769653",
+  appId: "1:953172769653:web:6803fe1c374296e820f13c",
+};
+
+// Inicializar Firebase
+const app = initializeApp(firebaseConfig);
+
+// Referencia a la base de datos
+const db = getFirestore(app);
+
+//const taskContainer = document.getElementById("search-results");
+const taskContainer = document.getElementById("productos-container");
+
+const onGetTask = (callback) => onSnapshot(collection(db, 'Productos'), callback)
+
+window.addEventListener('DOMContentLoaded', async () => {
+    onGetTask((querySnapshot) =>{
+        let html = ''
+    querySnapshot.forEach(doc => {
+        const task = doc.data()
+        console.log(doc.data());
+        html += `
+            <div class="result-item">
+                <h4>${task.Nombre}</h4>
+                <p class="precio_unitario_lista">Precio unitario: $${task.PrecioMayoreo}</p>
+                <p class="inventario_lista">Existencia: ${task.Existencia}</p>
+                <button id="add_2_kart"  class="btn btn-primary btn-sm add-to-cart-button">Agregar
+                    a la venta</button>
+            </div>
+        `
+    })
+    taskContainer.innerHTML =html
+    })
+})
+
+  
+  
+  

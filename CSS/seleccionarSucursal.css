@@ -9,7 +9,7 @@ body{
 }
 .SucursalesHeader{
     background-image: linear-gradient(to left, #ffffff, #005da8);
-    color: transparent;
+    color: black;
     background-clip: text;
     justify-content: center;
     align-items: center;

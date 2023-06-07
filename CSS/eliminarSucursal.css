@@ -8,8 +8,7 @@ body{
     background: radial-gradient(circle, rgba(242,253,255,1) 0%, rgba(225,250,255,1) 50%, rgba(242,253,255,1) 100%); 
 }
 .SucursalesHeader{
-    background-image: linear-gradient(to left, #ffffff, #005da8);
-    color: transparent;
+    color: black;
     background-clip: text;
     justify-content: center;
     align-items: center;
@@ -104,8 +103,7 @@ header{
     display: flex;
     height: 70px;
     /*background-color: rgb(84, 197, 241);*/
-    background: rgb(0,163,196);
-    background: linear-gradient(90deg, rgba(0,163,196,1) 2%, rgba(76,237,255,1) 52%, rgba(0,163,196,1) 100%); 
+    background: royalblue;
     justify-content: space-between;
     align-items: center;
     padding: 10px;

@@ -59,13 +59,13 @@ window.addEventListener('DOMContentLoaded', async () => {
     })
     taskContainer.innerHTML =html
 
-    const borrarBoton = taskContainer.querySelectorAll('.btn-delete')
+    //const borrarBoton = taskContainer.querySelectorAll('.btn-delete')
 
-    borrarBoton.forEach(btn => {
-        btn.addEventListener('click', ({target: {dataset}}) => {
-            console.log(dataset.id)
-        })
-    })
+    //borrarBoton.forEach(btn => {
+    //    btn.addEventListener('click', ({target: {dataset}}) => {
+    //        console.log(dataset.id)
+    //    })
+    //})
 
     })
 })

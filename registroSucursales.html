@@ -1,124 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Agregar Sucursal</title>
-        <link rel="icon" href="Media/Valorant.ico">
-        <link rel="stylesheet" href="CSS/actualizarProducto.css">
-    </head>
-    <body>
-         <!--Menú superior-->
-         <header>
-            <a href="#" class="logo">
-                <img src="Media/Valorant.ico">
-                <h2 class="nombre-empresa">La Papelería Pro</h2>
-            </div>
-            <nav>
-                <a href="#" class="nav-link">Inicio</a>
-                <a href="#" class="nav-link">Contacto</a>
-                <a href="#" class="nav-link">No se</a>
-            </nav>
-        </header>
-        <!--Tarjetas-->
-        <div class="body-div">
-            <div class="container">
-                <div class="card">
-                    <div class="contenido">
-                        <h1>Registro de sucursal</h1>
-                        <br>
-                        <p>Llena todos los campos requeridos</p>
-                        <div class="col  p-5 rounded">
-                            <div class="mb-4">
-                                <div class="columnas">
-                                    <div class="columna1">
-                                        <br>
-                                        <label for="nombreSucursal" class="form-label">Nombre*</label>
-                                        <input type="text" class="form-control" name="nombreSucursal" id="nombreSucursal">
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <label for="noExterior" class="form-label">Número Exterior*</label>
-                                        <input type="text" class="form-control" name="noExterior" id="noExterior">
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <label for="edoDireccion" class="form-label">Estado*</label>
-                                        <select class="form-select" name="paises" name="edoDireccion" id="edoDireccion">
-                                            <option value="NON"></option>
-                                            <option value="QRO">Querétaro</option>
-                                            <option value="CDMX">Ciudad de México</option>
-                                            <option value="EDOMEX">Establo de México</option>
-                                            <option value="HGO">Hidalgo</option>
-                                            <option value="JAL">Jalisco</option>
-                                            <option value="SIN">Sinaloa</option>
-                                        </select>
-                                    </div>
-                                    <div class="columna2">
-                                        <label for="encargadoSucursal" class="dorn-label">Encargado*</label>
-                                        <input type="text" class="form-control" name="encargadoSucursal" id="encargadoSucursal">
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <label for="noInterior" class="form-label">Número Interior</label>
-                                        <input type="text" class="form-control" name="noInterior" id="noInterior">
-                                        <br>
-                                        <br>
-                                        <label for="noInterior" class="form-label">Codigo Postal</label>
-                                        <input type="text" class="form-control" name="post" id="post">
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <label for="paisDireccion" class="form-label">País*</label>
-                                        <select class="form-select" name="paises" name="paisDireccion" id="paisDireccion">
-                                            <option value="NON"></option>
-                                            <option value="MX">México</option>
-                                            <option value="USA">USA</option>
-                                            <option value="CAN">Canada</option>
-                                        </select>
-                                    </div>
-                                    <div class="columna3">
-                                        <label for="descripcion" class="form-label">Descripcion*</label>
-                                        <input type="text" class="form-control" name="descripcion" id="descripcion">
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <label for="calleDireccion" class="form-label">Calle*</label>
-                                        <input type="text" class="form-control" name="calleDireccion" id="calleDireccion">
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <label for="municipioDireccion" class="form-label">Municipio*</label>
-                                        <select class="form-select" name="paises" name="municipioDireccion" id="municipioDireccion">
-                                            <option value="NON"></option>
-                                            <option value="QRO">Querétaro</option>
-                                            <option value="CDMX">Ciudad de México</option>
-                                            <option value="EDOMEX">Establo de México</option>
-                                            <option value="HGO">Hidalgo</option>
-                                            <option value="JAL">Jalisco</option>
-                                            <option value="SIN">Sinaloa</option>
-                                        </select>
-                                        <br>
-                                        <br>
-                                        
-                                    </div>
-                                </div> 
-                                
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Sucursal</title>
+    <link rel="icon" href="Media/Valorant.ico">
+    <!-- Agregar el enlace al archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-image: url("Media/fondo_azul_papeleria.avif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .logo img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .nombre-empresa {
+            display: inline-block;
+            font-size: 20px;
+            margin: 0;
+        }
+        
+        header {
+            background-color: #42b3ff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        
+        .body-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+        }
+        
+        .card h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-label {
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú superior -->
+    <header>
+        <h1 class="nombre-empresa">La papelería pro</h1>
+        <nav>
+        </nav>
+    </header>
+    
+    <!-- Tarjetas -->
+    <div class="body-div">
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <h1>Registro de sucursal</h1>
+                    <br>
+                    <p>Llena todos los campos requeridos</p>
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="nombreSucursal" class="form-label">Nombre*</label>
+                                    <input type="text" class="form-control" name="nombreSucursal" id="nombreSucursal">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="noExterior" class="form-label">Número Exterior*</label>
+                                    <input type="text" class="form-control" name="noExterior" id="noExterior">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="edoDireccion" class="form-label">Estado*</label>
+                                    <select class="form-select" name="edoDireccion" id="edoDireccion">
+                                        <option value="NON"></option>
+                                        <option value="QRO">Querétaro</option>
+                                        <option value="CDMX">Ciudad de México</option>
+                                        <option value="EDOMEX">Establo de México</option>
+                                        <option value="HGO">Hidalgo</option>
+                                        <option value="JAL">Jalisco</option>
+                                        <option value="SIN">Sinaloa</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="mb-4">
-                                
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="encargadoSucursal" class="form-label">Encargado*</label>
+                                    <input type="text" class="form-control" name="encargadoSucursal" id="encargadoSucursal">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="noInterior" class="form-label">Número Interior</label>
+                                    <input type="text" class="form-control" name="noInterior" id="noInterior">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="post" class="form-label">Código Postal</label>
+                                    <input type="text" class="form-control" name="post" id="post">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="paisDireccion" class="form-label">País*</label>
+                                    <select class="form-select" name="paisDireccion" id="paisDireccion">
+                                        <option value="NON"></option>
+                                        <option value="MX">México</option>
+                                        <option value="USA">USA</option>
+                                        <option value="CAN">Canadá</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion" class="form-label">Descripción*</label>
+                                    <input type="text" class="form-control" name="descripcion" id="descripcion">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="calleDireccion" class="form-label">Calle*</label>
+                                    <input type="text" class="form-control" name="calleDireccion" id="calleDireccion">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="municipioDireccion" class="form-label">Municipio*</label>
+                                    <select class="form-select" name="municipioDireccion" id="municipioDireccion">
+                                        <option value="NON"></option>
+                                        <option value="QRO">Querétaro</option>
+                                        <option value="CDMX">Ciudad de México</option>
+                                        <option value="EDOMEX">Establo de México</option>
+                                        <option value="HGO">Hidalgo</option>
+                                        <option value="JAL">Jalisco</option>
+                                        <option value="SIN">Sinaloa</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <br>
-                        <button onclick="window.location.href= 'index.html'" type="button">Cancelar</button>
-                        <button type="summit" name="regSuc" id="regSuc">Registrar</button>
-                    </div>
+                        <div class="text-center">
+                            <button onclick="window.location.href='index.html'" type="button">Cancelar</button>
+                            <button type="submit" name="regSuc" id="regSuc">Registrar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <!--Tarjetas-->
-        <script  type="module" src="./JS/RegSucursal.js"></script>
-        <script src="./JS/bootstrap.bundle.min.js"></script>
-    </body>
+    </div>
+    
+    <!-- Agregar el enlace al archivo JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

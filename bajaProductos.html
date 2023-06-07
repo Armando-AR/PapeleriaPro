@@ -1,60 +1,86 @@
 <!DOCTYPE html>
-<html lagn="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Baja de productos</title>
-        <link rel="icon" href="Media/Valorant.ico">
-        <link rel="stylesheet" href="CSS/borrarProducto.css">
-        <style>
-            table, th, td{
-                border-collapse: collapse;
-                border: 1px solid black;
-            }
-            th, th {
-                padding: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <!--Menú superior-->
-        <header>
-            <a href="#" class="logo">
-                <img src="Media/Valorant.ico">
-                <h2 class="nombre-empresa">La Papelería Pro</h2>
-            </div>
-            <nav>
-                <a href="#" class="nav-link">Inicio</a>
-                <a href="#" class="nav-link">Contacto</a>
-                <a href="#" class="nav-link">No se</a>
-            </nav>
-        </header>
-        <!--Menú superior-->
-        <br>
-        <div class="body-div">
-            <div class="container">
-                <div class="card">
-                    <div class="contenido">
-                        <h1>Baja de producto</h1>
-                        <br>
-                        <p>Seleccione la opcion barrar para eliminar el producto de la lista </p><br>
-                        <div class="col  p-5 rounded">
-                            <div class="mb-4">
-                                <table style="width: 100%" id="list-container">
-                                </table>
-                            </div>
-                            <div class="mb-4">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script  type="module" src="./JS/bajaProd.js"></script>
-        <script src="./JS/bootstrap.bundle.min.js"></script>
+<html lang="en">
 
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baja de productos</title>
+  <link rel="icon" href="Media/Valorant.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+
+    th,
+    th {
+      padding: 10px;
+    }
+
+    .btn-delete {
+      background-color: #007bff;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Menú superior-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="Media/Valorant.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+        <span class="nombre-empresa">La Papelería Pro</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">No se</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!--Menú superior-->
+  <br>
+  <div class="body-div">
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">Baja de producto</h1>
+          <br>
+          <p class="card-text">Seleccione la opción para eliminar el producto de la lista</p>
+          <br>
+          <div class="col p-5 rounded">
+            <div class="mb-4">
+              <table class="table table-bordered" id="list-container">
+              </table>
+            </div>
+            <div class="mb-4"><!--
+              <button class="btn btn-delete btn-sm">Eliminar</button>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./JS/bajaProd.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
 
 </html>
