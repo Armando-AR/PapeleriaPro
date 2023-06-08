@@ -1,0 +1,83 @@
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0F0F0;
+    }
+    
+    #header {
+      background-color: #2fb4cc;
+      color: white;
+      padding: 20px;
+    }
+    
+    #cart-status {
+      text-align: center;
+      margin-top: 30px;
+      color:#2fb4cc;
+    }
+    
+    #cart-products {
+      margin-top: 30px;
+    }
+    
+    #cart-products table {
+      margin: 30px auto;
+      width: 60%;
+      border-collapse: collapse;
+      align-items: center;
+    }
+    
+    #cart-products th,
+    #cart-products td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    
+    #cart-products th {
+      background-color: #2fb4cc;
+      color: white;
+      
+    }
+    
+    #total-amount {
+      margin-top: 30px;
+      text-align: center;
+    }
+    
+    
+    #checkout-buttons {
+      margin-top: 30px;
+      text-align: center;
+    }
+    
+    button {
+      padding: 10px 15px;
+      background-color: #2fb4cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      
+    }
+    .td_del{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+    }
+    .boton-personalizado {
+      text-decoration: none;
+      color: white;
+      background-color: #FF5D5D;
+      text-decoration: none;
+      padding: 7px;
+      border-radius: 5px;
+    }
+    .boton-personalizado:hover {
+      background-color: #ff5d5e;
+    }

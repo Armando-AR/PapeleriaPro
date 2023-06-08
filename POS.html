@@ -5,135 +5,7 @@
     <meta charset="UTF-8">
     <title>Pantalla de Venta</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-        }
-
-        .navbar {
-            background-color: #007bff;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 999;
-        }
-
-        .left-container {
-            position: fixed;
-            top: 56px;
-            bottom: 0;
-            left: 0;
-            width: 20%;
-            max-width: 300px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .search-bar {
-            margin-bottom: 10px;
-        }
-
-        .search-results {
-            max-height: calc(100vh - 180px);
-            overflow-y: auto;
-        }
-
-        .result-item {
-            background-color: #fff;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .result-item h4 {
-            margin: 0;
-        }
-
-        .result-item p {
-            margin: 5px 0;
-        }
-
-        .result-item button {
-            margin-top: 5px;
-        }
-
-        .fixed-container {
-            position: fixed;
-            top: 56px;
-            right: 0;
-            bottom: 0;
-            width: 80%;
-            background-color: #fff;
-            border-left: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;
-        }
-
-        .checkout-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .checkout-item h3 {
-            margin: 0;
-        }
-
-        .checkout-item p {
-            margin: 5px 0;
-        }
-
-        .delete-button {
-            width: fit-content;
-            height: 30px;
-            background-color: black;
-            /* Cambio a color negro */
-            border: none;
-            cursor: pointer;
-        }
-
-        .delete-button i {
-            color: #fff;
-            /* Cambio a letras blancas */
-        }
-
-        .delete-button-label {
-            display: block;
-            font-size: 12px;
-            color: #fff;
-        }
-
-        .total {
-            text-align: right;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .payment-container {
-            text-align: right;
-            margin-top: 20px;
-        }
-
-        .payment-container input {
-            margin-bottom: 5px;
-        }
-
-        .pay-button {
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/pos.css">
 </head>
 
 <body>
@@ -159,22 +31,18 @@
         </div>
         <div class="payment-container">
             <!--<input type="number" placeholder="Monto a pagar" class="form-control amount-input">
-            <input type="number" placeholder="Cambio" class="form-control change-input" readonly>
-            --><button class="btn btn-success pay-button" onclick="redireccionar()">NEXT -></button>
+            <input type="number" placeholder="Cambio" class="form-control change-input" readonly>-->
+            <button class="btn btn-success pay-button" id="next_button">NEXT -></button>
         </div>
     </div>
     <script src="JS/jquery-3.7.0.js"></script>
     <script type="module" src="/JS/pos.js"></script>
+    <script type="module" src="/JS/pos2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script>
-        function redireccionar() {
-          window.location.href = "seleccionarPago.html";
-        }
-      </script>
+
 </body>
 
 </html>

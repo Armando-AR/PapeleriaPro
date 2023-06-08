@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             html += `
                 <div class="result-item">
                     <h4>${task.Nombre}</h4>
-                    <p class="precio_unitario_lista">Precio unitario: $${task.PrecioMayoreo}</p>
+                    <p class="precio_unitario_lista">Precio unitario: $${task.PrecioUnitario}</p>
                     <p class="inventario_lista">Existencia: ${task.Existencia}</p>
                     <button id="add_2_kart"  class="btn btn-primary btn-sm add-to-cart-button">Agregar
                         a la venta</button>
@@ -59,9 +59,6 @@ window.addEventListener('DOMContentLoaded', async () => {
         });
     });
 });
-
-
-
 
 
 
@@ -190,7 +187,7 @@ function updateTotal() {
     totalElement.textContent = `Total: $${total.toFixed(2)}`;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     const amountInput = document.querySelector(".amount-input");
     const changeInput = document.querySelector(".change-input");
     const totalElement = document.getElementById("total_a_pagar");
@@ -206,27 +203,27 @@ document.addEventListener("DOMContentLoaded", function () {
             changeInput.value = "Monto insuficiente";
         }
     });
-});
-
+});*/
+var numeroAleatorio = Math.floor(Math.random() * 99999) + 1;
 document.addEventListener("DOMContentLoaded", function () {
     const amountInput = document.querySelector(".amount-input");
     const totalElement = document.getElementById("total_a_pagar");
+    const docCar = collection(db, "Carrito");
+    
     const payButton = document.querySelector(".pay-button");
-
     payButton.addEventListener("click", function () {
-        const amount = parseFloat(amountInput.value);
+        //const amount = parseFloat(amountInput.value);
         const total = parseFloat(totalElement.textContent.replace("Total: $", ""));
-
+        //const total = parseFloat(document.getElementById("total_a_"));
+        
+        
         if (total === 0) {
             showAlert("Carrito vacío");
             clearInputs();
-        } else if (amount >= total) {
-            showAlert("Compra exitosa");
-            clearInputs();
-            clearCart();
-        } else {
-            showAlert("Monto no válido");
-            clearInputs();
+        }else {
+            showAlert("Agregado exitosamente al carrito");
+            //clearCart();
+            window.location.href ="verCarrito.html";
         }
     });
 
@@ -250,4 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
 
