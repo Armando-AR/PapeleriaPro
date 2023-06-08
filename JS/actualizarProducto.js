@@ -25,9 +25,14 @@ const app = initializeApp(firebaseConfig);
 // Referencia a la base de datos
 const db = getFirestore(app);
 
+
+
 // Seleccion de la tabla de Productos
 const collectionRef = collection(db, "Productos");
-const IdProducto = 4444941;
+var IdProducto = 4444941;
+const urlParams = new URLSearchParams(window.location.search);
+IdProducto = parseInt(urlParams.get('id'));
+console.log(IdProducto);
 const querySelection = query(collectionRef, where("IdProducto", "==", IdProducto));
 
 getDocs(querySelection).then((querySnapshot) => {
@@ -77,3 +82,5 @@ actualizarBtn.addEventListener("click", () => {
       console.error("Error al obtener el producto de Firebase:", error);
     });
 });
+
+
